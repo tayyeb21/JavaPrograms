@@ -1,0 +1,17 @@
+package JavaOperatorsExpression;
+
+public class BitWiseOperators {
+	public static void main(String[] args) {
+		/* 
+		 * Bitwise Operator only works with integer data type and also only returns inteeger values
+		 */
+		int x = 10; // 1010 0b1010
+		int y = 6; // 0110 0b0110
+		int and, or, xor, not, rshift, unsignedRShift, lshift;
+		and = x & y;
+		or = x | y;
+		xor = x ^ y;
+		System.out.printf("AND Operation %d %nOR Operation %d %nXOR Operation %d %n", and, or, xor);
+		
+	}
+}

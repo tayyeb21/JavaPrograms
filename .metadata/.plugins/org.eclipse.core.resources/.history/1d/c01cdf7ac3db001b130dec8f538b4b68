@@ -1,0 +1,64 @@
+package JavaOperatorsExpression;
+
+import java.util.Scanner;
+
+public class ArithmeticExpressions {
+	
+	public static float areaTriangle(int a, int b, int c) {
+		float area, s;
+		s = (a+b+c)/2f;
+		area = (float)( Math.sqrt( s * (s - a) * (s - b) * (s - c) ) );
+		System.out.println(s);
+		System.out.println( Math.sqrt( s * (s - a) * (s - b) * (s - c) ));
+		return area;
+	}
+	
+	public static void main(String[] args) {
+		/* Arithmetic Operator 
+		 * () having highest precedence among below operator
+		 *  [ * / % ] having higher precedence with left to right associativity 
+		 *  [ + - ] having lower precedence with left to right associativity
+	     */
+		/* Mod operation */
+		float quotient1 = 12.7f / 3.1f;
+		float remainder1 = 12.7f % 3.1f; 
+		// will give result as 0.3 in java because in mod operation on decimal point number java take only integer quotient and ignores decimal point quotient calculation
+		
+		System.out.printf("Qutioent %f %nRemainder %f %n", quotient1, remainder1);
+		
+		/* Operator Precedence */
+		/* a+b
+		 * ---		a + b / 2 will give result as 11 because divide has higher precedence 
+		 * 2
+		 * */
+		int precedence1 = 	6 + 10 / 2;
+		int precedence2 = 	(6 + 10) / 2;
+		System.out.printf("Expression Without Paranthesis %d %nExpression with Paranthesis %d %n", precedence1, precedence2);
+		
+		/* Arithmetic Operations on diffrent datatypes and their results
+		 * 
+		 * byte + byte = integer
+		 * short + byte = integer
+		 * int + byte/short = integer
+		 * int + long = long (higher level data type)
+		 * char + byte = integer (char is also treated as integer internally)
+		 * because every non decimal point number in java in integer so compiler does coercion (internal type change)
+		 *   
+		 *  float + int = float 
+		 *  float + long = float
+		 *  double + float = double (higher level data type)
+		 *  double + long = double (coercion)
+		 *  because float/double is having decimal point so compiler will change integer in float (coercion)
+		 *   
+		 * 
+		 * */
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the sides of triangle: ");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+		
+		System.out.println("Area of Triangle: " + ArithmeticExpressions.areaTriangle(a, b, c));
+	}
+}

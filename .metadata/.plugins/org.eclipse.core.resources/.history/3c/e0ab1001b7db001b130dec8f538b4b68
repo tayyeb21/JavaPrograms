@@ -1,0 +1,15 @@
+package javaLearningBasics;
+
+public class ArithmeticExpressions {
+	public static void main(String[] args) {
+		/* Arithmetic Operator 
+		 * () having highest precedence among below operator
+		 *  [ * / % ] having higher precedence with left to right associativity 
+		 *  [ + - ] having lower precedence with left to right associativity
+	     */
+		/* Mod operation */
+		float quotient1 = 12.7f / 3.1f;
+		float remainder1 = 12.7f % 3.1f; // will give result as 0.3 because in java quotient will always be in integer form
+		System.out.printf("Qutioent %f %n Remainder %f %n", quotient1, remainder1);
+	}
+}

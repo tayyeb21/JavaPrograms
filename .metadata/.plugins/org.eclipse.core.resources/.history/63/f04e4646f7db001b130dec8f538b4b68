@@ -1,0 +1,44 @@
+package JavaOperatorsExpression;
+
+public class BitWiseOperators {
+	public static void main(String[] args) {
+		/* 
+		 * Bitwise Operator only works with integer data type and also only returns inteeger values
+		 */
+		int x = 10; // 1010 0b1010
+		int y = 6; //  0110 0b0110
+		int and, or, xor, not, rshift, unsignedRShift, lshift;
+		
+		/*
+		 * & operator performms AND operations on integer
+		 * | operator performms OR operations on integer
+		 * ^ operator performms XOR operations on integer
+		 */
+		and = x & y; 
+		or = x | y;
+		xor = x ^ y;
+		System.out.printf("AND Operation: %d %nOR Operation: %d %nXOR Operation: %d %n", and, or, xor);
+		
+		/*
+		 * LEFT SHIFT
+		 * LEFT SHIFT operator shifts the bits one place to the left;
+		 * The left shift operator doubles the number means if the number is left shifted by k place it will increase the number by:
+		 *                                  number * 2^k
+		 */
+		lshift = x<<1;
+		System.out.println("LEFT Shift: " + lshift);
+		
+		/*
+		 * Right SHIFT
+		 * Right SHIFT operator shifts the bits one place to the rigth;
+		 * The right shift operator divides the number by:
+		 *              number / 2^k
+		 * Right shift operator keeps the sign bit in its place meaning it do not right shift the sign bit at beginning hence keeps the number negative                  
+		 */
+		
+		x = -1;
+		rshift = x>>1;
+		System.out.println("Right Shift: " + rshift);
+		
+	}
+}

@@ -1,0 +1,24 @@
+package javaLearningBasics;
+
+public class ArithmeticExpressions {
+	public static void main(String[] args) {
+		/* Arithmetic Operator 
+		 * () having highest precedence among below operator
+		 *  [ * / % ] having higher precedence with left to right associativity 
+		 *  [ + - ] having lower precedence with left to right associativity
+	     */
+		/* Mod operation */
+		float quotient1 = 12.7f / 3.1f;
+		float remainder1 = 12.7f % 3.1f; // will give result as 0.3 in java
+		System.out.printf("Qutioent %f %nRemainder %f %n", quotient1, remainder1);
+		
+		/* Operator Precedence */
+		/* a+b
+		 * ---		a + b / 2 will give result as 11 because divide has higher precedence 
+		 * 2
+		 * */
+		int precedence1 = 	6 + 10 / 2;
+		int precedence2 = 	(6 + 10) / 2;
+		System.out.printf("Expression Without Paranthesis %d %nExpression with Pranthesis %d %n", precedence1, precedence2);
+	}
+}

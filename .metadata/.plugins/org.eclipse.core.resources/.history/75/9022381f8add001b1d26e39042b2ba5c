@@ -1,0 +1,25 @@
+package javaMethods;
+
+public class MethodBasics {
+	
+	public static boolean isPrime(int n) {
+		boolean flag = true;
+		
+		if(n <= 2 && n > 0)
+			return true;
+		
+		for(int i = 2; i <= n/2; i++) {
+			if(n % i == 0) {
+				flag = false;
+				break;
+			}
+			
+		}
+		
+		return flag;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(MethodBasics.isPrime(91));
+	}
+}

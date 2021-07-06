@@ -1,0 +1,47 @@
+package javaArray;
+
+public class ArrayBasics {
+	public static int secondLargest(int arr[]) {
+		int max = arr[0], secondMax = arr[0];
+		
+		for(int value : arr) {
+			if(value > max) {
+				secondMax = max;
+				max = value;
+			}
+			else if(value > secondMax) {
+				secondMax = value;
+			}
+		}
+		
+		return secondMax;
+	}
+	
+	public static void lRotation(int arr[]) {
+		int firstElement = arr[0];
+		for(int i = 1; i < arr.length; i++) {
+			
+			arr[i - 1] = arr[i];
+		}
+		arr[arr.length - 1] = firstElement;
+	}
+	
+	public static void main(String[] args) {
+		int[] arr = {3, 8, 9, 7, 6, 12, 6, 15, 5, 4, 10};
+		System.out.println("The Second Largest Element in array is: "+ ArrayBasics.secondLargest(arr));
+		
+		System.out.println("Array before the Rotation");
+		for(int value : arr) 
+			System.out.print(value + ",\t");
+		
+		System.out.println("");
+		
+		System.out.println("Array After the left Rotation");
+		ArrayBasics.lRotation(arr);
+		
+		for(int value : arr) 
+			System.out.print(value + ",\t");
+		
+		System.out.println("");
+	}
+}

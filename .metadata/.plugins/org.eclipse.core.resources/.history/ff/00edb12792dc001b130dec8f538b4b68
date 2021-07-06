@@ -1,0 +1,21 @@
+package javaArray;
+
+public class ArrayBasics {
+	public static int secondLargest(int arr[]) {
+		int max = 0, secondMax = 0;
+		
+		for(int value : arr) {
+			if(value > max) {
+				secondMax = max;
+				max = value;
+			}
+		}
+		
+		return secondMax;
+	}
+	
+	public static void main(String[] args) {
+		int[] arr = {25, 30, 35, 40, 45};
+		System.out.println("The Second Largest Element in array is: "+ ArrayBasics.secondLargest(arr));
+	}
+}
